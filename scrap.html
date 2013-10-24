@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+        TD {
+            padding:10px;
+            border:1px #eee solid;
+        }
+    </style>
+</head>
+<body>
+    <input id="num" type="text"/> <button id="generate">Enter a number and click</button>
+    <script src="scrap.js"></script>
+    <script>
+        document.getElementById('generate').addEventListener('click', function() {
+            var num = parseInt(document.getElementById("num").value, 10);
+            if (typeof num === "number") {
+                spiral(num)
+            } else {
+                alert('enter a number');
+            }
+        })
+    </script>
+</html>
